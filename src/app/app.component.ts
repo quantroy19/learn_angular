@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  // title = 'we16302';
+  title = 'we16302';
   // name = 'Đỗ Minh Quân';
   // date = '28/05/2002';
   // gender = 'Nam';
@@ -45,18 +45,44 @@ export class AppComponent {
       name: 'Ma bư',
       avatar:
         'https://snkrvn.com/wp-content/uploads/2018/01/maxresdefault-960x640.jpg',
-      gender: 'Nam',
+      gender: 'Nữ',
     },
   ];
   formHero: any = {
     code: '',
     name: '',
     avatar: '',
-    gender: '',
+    gender: 'Nữ',
   };
   remove(hero: any) {
     // console.log(hero);
     this.heroes = this.heroes.filter((item) => item.code != hero.code);
+  }
+  update(item: any) {
+    this.formHero = { ...item };
+  }
+  submitForm() {
+    const newHero = { ...this.formHero };
+    // this.heroes.push(newHero);
+    let index = -1;
+    this.heroes.forEach((value, i) => {
+      if (value.code == newHero.code) {
+        index = i;
+        return;
+      }
+    });
+    if (index == -1) {
+      this.heroes.push(newHero);
+    } else {
+      this.heroes[index] = newHero;
+    }
+
+    this.formHero = {
+      code: '',
+      name: '',
+      avatar: '',
+      gender: 'nữ',
+    };
   }
 
   emenies: Array<any> = [
@@ -85,6 +111,40 @@ export class AppComponent {
       amour: 20,
     },
   ];
+  formEmenies: any = {
+    code: '',
+    name: '',
+    avatar: '',
+    heathling: '',
+    amour: '',
+  };
+
+  submitFormQuai() {
+    const newEneny = { ...this.formEmenies };
+    let index = -1;
+    this.emenies.forEach((e, i) => {
+      if (newEneny.code == e.code) {
+        index = i;
+        return;
+      }
+    });
+    if (index == -1) {
+      this.emenies.push(newEneny);
+    } else {
+      this.emenies[index] = newEneny;
+    }
+
+    this.formEmenies = {
+      code: '',
+      name: '',
+      avatar: '',
+      heathling: '',
+      amour: '',
+    };
+  }
+  updateQuai(quai: any) {
+    this.formEmenies = quai;
+  }
   removeQuai(quai: any) {
     // console.log(hero);
     this.emenies = this.emenies.filter((item) => item.code != quai.code);
