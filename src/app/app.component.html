@@ -30,13 +30,13 @@
   <div class="row">
     <div class="col-6">
       <!-- <form action="" class="border p-2 mb-3"> -->
-
+      <app-quai></app-quai>
       <h3>Form Hero</h3>
-      <form action="" class="form-group border p-3">
+      <form action="" class="form-group border p-3" id="onTop">
         {{formHero | json}}
         <div class="form-group">
           <label for="">Code</label>
-          <input type="text" [(ngModel)]="formHero.code" class="form-control" name="code">
+          <input disabled type="text" [(ngModel)]="formHero.id" class="form-control" name="code">
         </div>
         <div class="form-group">
           <label for="">Tên</label>
@@ -56,7 +56,7 @@
         <button class="btn btn-sm btn-info" (click)="submitForm()">Lưu</button>
       </form>
     </div>
-    <div class="col-6">
+    <!-- <div class="col-6">
       <h3>Form Eneny</h3>
       {{formEmenies|json}}
       <form action="" class="form-group border p-3">
@@ -82,7 +82,7 @@
         </div>
         <button type="submit" (click)="submitFormQuai()" class="btn btn-sm btn-success">Lưu</button>
       </form>
-    </div>
+    </div> -->
 
 
     <table class="table table-hover">
@@ -95,12 +95,12 @@
       </thead>
       <tbody *ngIf="heroes.length >0">
         <tr *ngFor="let item of heroes">
-          <td>{{item.code}}</td>
+          <td>{{item.id}}</td>
           <td>{{item.name}}</td>
           <td><img [src]="item.avatar" alt="" width="100"></td>
           <td>{{item.gender}}</td>
           <td>
-            <button (click)="update(item)" class="btn btn-sm btn-warning">Sửa</button>&nbsp;
+            <a href="#onTop" (click)="update(item)" class="btn btn-sm btn-warning">Sửa</a>&nbsp;
             <button (click)="remove(item)" class="btn btn-sm btn-danger">Xoá</button>
           </td>
         </tr>
@@ -108,7 +108,7 @@
     </table>
     <br>
 
-    <h2>Quái</h2>
+    <!-- <h2>Quái</h2>
     <table class="table table-hover">
       <thead>
         <th>Mã</th>
@@ -132,5 +132,5 @@
           <td></td>
         </tr>
       </tbody>
-    </table>
+    </table> -->
   </div>
