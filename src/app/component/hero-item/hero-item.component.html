@@ -1,0 +1,15 @@
+<tr>
+  <td>{{ heroData.id }}</td>
+  <td>{{ heroData.name }}</td>
+  <td><img [src]="heroData.avatar" alt="" width="100" /></td>
+  <td>{{ heroData.gender | gender }}</td>
+  <td>
+    <a
+      href="#onTop"
+      [routerLink]="['/edit-hero/', heroData.id]"
+      class="btn btn-sm btn-warning"
+      >Sửa</a
+    >&nbsp;
+    <button (click)="remove()" class="btn btn-sm btn-danger">Xoá</button>
+  </td>
+</tr>

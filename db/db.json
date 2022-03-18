@@ -4,33 +4,21 @@
       "id": 1,
       "name": "Songoku",
       "avatar": "https://i.pinimg.com/736x/d7/bd/23/d7bd2389fd03889edc309504c3377409.jpg",
-      "gender": "Nam",
+      "gender": 1,
       "attack": 50
     },
     {
       "id": 2,
       "name": "Ma bư",
       "avatar": "https://images.unsplash.com/photo-1504438800894-bd451395e3a4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80/uploads/2018/01/maxresdefault-960x640.jpg",
-      "gender": "Nữ",
+      "gender": 0,
       "attack": 100
-    },
-    {
-      "id": 6,
-      "name": "43333333",
-      "avatar": "https://images.unsplash.com/photo-1530041539828-114de669390e",
-      "gender": "Nam"
     },
     {
       "id": 7,
       "name": "Đỗ Minh Quân",
       "avatar": "https://images.unsplash.com/photo-1614886879262-eedae13879ec",
-      "gender": "Nam"
-    },
-    {
-      "id": 8,
-      "name": "33rrrrr",
-      "avatar": "https://images.unsplash.com/photo-1553736026-ff14d158d222",
-      "gender": "Nam"
+      "gender": 1
     }
   ],
   "enemies": []
